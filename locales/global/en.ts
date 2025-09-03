@@ -1,8 +1,7 @@
 const en = {
+  title: "Main app title",
+  description: "Main app description",
   welcome: "Hello {name}!",
-  navbar: {
-    startMentoring: "Start mentoring",
-  },
   ar: "AR",
   en: "EN",
   actions: {
@@ -21,8 +20,6 @@ const en = {
     notFound: "Sorry, resource not found",
     globalError: "Sorry, something went wrong",
   },
-  title: "Mentorizer",
-  description: "Skill up. Level up. Together",
   loading: "Loading",
 } as const;
 

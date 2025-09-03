@@ -1,18 +1,32 @@
-import { NextRequest } from "next/server";
+import { NextMiddleware } from "next/server";
+import i18nMiddleware from "./lib/middlewares/i18n.middleware";
+import authMiddleware from "./lib/middlewares/auth.middleware";
+import rbacMiddleware from "./lib/middlewares/rbac.middlware";
+import { stackMiddlewares } from "./lib/middlewares/stackHandler";
 
-import { createI18nMiddleware } from "next-international/middleware";
+export type MiddlewareFactory = (middleware: NextMiddleware) => NextMiddleware;
 
-const I18nMiddleware = createI18nMiddleware({
-	locales: ["ar", "en"],
-	defaultLocale: "ar",
-});
+// middlewares order
+// 1. Log the request
+// 2. Security headers and checks
+// 3. Rate limiting
+// 4. Internationalization
+// 5. Authentication
+// 6. Role-based access control
+const middlewares = [
+  // loggingMiddleware,
+  // securityMiddleware,
+  // rateLimitMiddleware,
+  i18nMiddleware,
+  authMiddleware,
+  rbacMiddleware,
+];
 
-export async function middleware(req: NextRequest) {
-	return I18nMiddleware(req);
-}
+export default stackMiddlewares(middlewares);
 
 export const config = {
-	matcher: [
-		"/((?!api|static|.*\\..*|_next|favicon.ico|manifest.json|robots.txt).*)",
-	],
+  matcher: [
+    "/((?!api|static|.*\\..*|_next|favicon.ico|manifest.json|robots.txt).*)",
+    "/api/((?!auth).*)",
+  ],
 };

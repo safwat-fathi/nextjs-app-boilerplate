@@ -1,7 +1,7 @@
 const ar = {
-  navbar: {
-    startMentoring: "إبدأ بالتوجيه",
-  },
+  title: "العنوان الرئيسي",
+  description: "الوصف الرئيسي",
+  welcome: "أهلا {name}!",
   ar: "العربية",
   en: "الإنجليزية",
   actions: {
@@ -20,9 +20,6 @@ const ar = {
     notFound: "عذرا، لم يتم العثور على المصدر المطلوب",
     globalError: "عذرا، حدث خطأ ما",
   },
-  title: "مينتورايزر",
-  description: "نرتقي بمهارتنا. نرتقي بمستوياتنا. معا.",
-  welcome: "أهلا {name}!",
 } as const;
 
 export default ar;

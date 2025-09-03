@@ -7,21 +7,21 @@ import { I18nProviderClient } from "@/locales/client";
 import PageLoader from "../components/Loaders/PageLoader";
 
 export default function Providers({
-	children,
-	params,
+  children,
+  params,
 }: PropsWithChildren<{
-	params: { locale: string };
+  params: { locale: string };
 }>) {
-	return (
-		<I18nProviderClient
-			locale={params.locale}
-			fallback={
-				<div className="w-full min-h-screen flex items-center justify-center">
-					<PageLoader />
-				</div>
-			}
-		>
-			{children}
-		</I18nProviderClient>
-	);
+  return (
+    <I18nProviderClient
+      locale={params.locale}
+      fallback={
+        <div className="w-full min-h-screen flex items-center justify-center">
+          <PageLoader />
+        </div>
+      }
+    >
+      {children}
+    </I18nProviderClient>
+  );
 }

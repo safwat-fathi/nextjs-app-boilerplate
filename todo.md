@@ -16,7 +16,7 @@
 
 - [x] about
 - [ ] support & users suggestions
-- [ ] user profile 
+- [ ] user profile
 - [ ] login
 - [ ] register
 - [ ] forgot password
@@ -27,4 +27,4 @@
 
 ## functional requirements
 
-- [ ] i18n 
+- [ ] i18n

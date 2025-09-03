@@ -72,7 +72,7 @@ Here's a peek at the organized directory structure:
 /app            // app directory
     /[locale]   // pages directory
     /api        // api directory
-/lib            // library directory - custom application code 
+/lib            // library directory - custom application code
     /components // Reusable components
     /hooks      // Custom hooks
     /utils      // Custom utilities
@@ -81,14 +81,13 @@ Here's a peek at the organized directory structure:
 /public         // Static assets
 ```
 
-check [next-international](https://next-international.vercel.app/) docs for more info on this app directory structure
-
 ## Custom Scripts 🚀
 
 We've added some custom scripts to make your life easier:
 
 - **Linting**: `yarn lint`
 - **Formatting**: `yarn format`
+- **Developing**: `yarn dev`
 - **Building**: `yarn run build`
 - **Starting**: `yarn start`
 
@@ -106,15 +105,20 @@ Get ready to build something amazing with this powerful boilerplate! If you have
 
 ---
 
-With ❤️ by [Your Name]
+With ❤️ by Safwat Fathi
 
 ---
 
-Need help? Check out the [Next.js Documentation](https://nextjs.org/docs) or [TailwindCSS Documentation](https://tailwindcss.com/docs).
+Need help? Check out the:
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [DaisyUI Documentation](https://daisyui.com/)
+- [TailwindCSS Documentation](https://tailwindcss.com/docs)
+- [next-international Documentation](https://next-international.vercel.app/) docs for more info i18n
 
 ---
 
-Feel free to reach out to [your-email@example.com](mailto:your-email@example.com) for any inquiries.
+Feel free to reach out to [safwat.rashwan@gmail.com](mailto:safwat.rashwan@gmail.com) for any inquiries.
 
 ---
 
