@@ -1,6 +1,7 @@
 import { MiddlewareFactory } from "@/middleware";
-import { NextRequest, NextResponse } from "next/server";
+
 import { getTokenAction } from "@/app/[locale]/actions";
+import { NextRequest, NextResponse } from "next/server";
 
 const PUBLIC_ROUTES = [
   "/",

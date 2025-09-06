@@ -1,6 +1,6 @@
 import { ReadonlyURLSearchParams } from "next/navigation";
 
-import { IParams } from "@/types/services";
+import { IParams } from "@/types/services/base";
 
 export const createQueryString = (
   name: string,
@@ -22,9 +22,9 @@ export function createParams(params: IParams): any {
   Object.keys(params).forEach((key) => {
     const value = params[key];
     if (Array.isArray(value)) {
-      value.forEach((v) => searchParams.append(key + "[]", v));
-    } else if (value) {
-      searchParams.set(key, value);
+      value.forEach((v) => searchParams.append(key + "[]", String(v)));
+    } else if (value !== undefined && value !== null) {
+      searchParams.set(key, String(value));
     }
   });
 

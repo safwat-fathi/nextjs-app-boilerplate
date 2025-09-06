@@ -1,4 +1,4 @@
-import { ExampleService } from "@/lib/services/example.service";
+// import { ExampleService } from "@/lib/services/example.service";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -12,15 +12,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const exampleService = ExampleService.Instance();
+    // const exampleService = ExampleService.Instance();
 
-    const result = await exampleService.publicMethod();
+    // const result = await exampleService.publicMethod();
 
-    if (result)
-      return NextResponse.json(
-        { success: true, message: "Added new row successfully" },
-        { status: 200 },
-      );
+    // if (result)
+    //   return NextResponse.json(
+    //     { success: true, message: "Added new row successfully" },
+    //     { status: 200 },
+    //   );
 
     return NextResponse.json(
       { success: false, message: "Added new row failed" },
