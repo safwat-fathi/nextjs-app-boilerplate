@@ -1,6 +1,6 @@
 import { MiddlewareFactory } from "@/middleware";
 import { NextRequest, NextResponse } from "next/server";
-import { getTokenAction } from "@/app/[locale]/actions";
+import { getTokenAction } from "@/app/[locale]/actions/auth.action";
 
 // Define user roles
 type Role = "admin" | "user" | "guest";

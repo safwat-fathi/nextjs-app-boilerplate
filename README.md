@@ -77,8 +77,8 @@ Here's a peek at the organized directory structure:
     /hooks      // Custom hooks
     /utils      // Custom utilities
     /providers  // App context providers
-    /services   // API and auth services and other custom services to handle your business logic
 /public         // Static assets
+/services   // API services, External services, Auth services and other custom services to handle your business logic
 ```
 
 ## Custom Scripts 🚀

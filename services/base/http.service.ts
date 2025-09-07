@@ -1,8 +1,9 @@
 import {
   appRedirect,
-  getTokenAction,
+  getCookieAction,
   onLogoutAction,
-} from "@/app/[locale]/actions";
+} from "@/app/[locale]/actions/cookie-store.action";
+import { COOKIE_NAMES } from "@/lib/constants";
 
 import {
   HttpServiceAbstract,
@@ -45,7 +46,7 @@ export default class HttpService<T = any> extends HttpServiceAbstract<T> {
 
   private async _getAuthHeaders(): Promise<HeadersInit> {
     if (!this._token) {
-      this._token = await getTokenAction();
+      this._token = await getCookieAction(COOKIE_NAMES.TOKEN);
     }
 
     return this._token
